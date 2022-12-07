@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Constant number - Fundamentals of Web Design</title>
+<link href="stylesheets3.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="container">
+<img src="russoslogo.png" alt="Russo Pizza Logo">
+
+<nav>
+<a href="index.html">Home</a> |
+<a href="menu.html">Menu</a> |
+<a href="order.html">Order</a>
+</nav>
+
+<hr>
+
+<section>
+<h1>CUSTOMER INFORMATION</h1>
+<p>Thank you for using our online ordering form for quick and easy
+orders. Please enter your name and phone number and whether you
+want to place an order for delivery or pickup. Note that required
+values are marked by an asterisk (*). If you
+want to place your order over the phone, call us at
+<a href="tel:+16145551234">(614) 555-1234</a>.</p>
+
+<form action=https://www.example.com/russopizzas/customer method="post">
+
+<div>
+ 				<label for="nameBox">Name*</label>
+<input name="custName" id="nameBox" type="text" placeholder="First and Last Name" required>
+</div>
+
+<div>
+ 				<label for="phoneBox">Phone*</label>
+<input name="custPhone" id="phoneBox" type="tel" required placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+</div>
+
+<div>
+<input name="orderType" id="delivery" type="radio"
+checked><label for="delivery">Delivery</label>
+<input name="orderType" id="pickup" type="radio"><label 
+for="pickup">Pickup</label>
+</div>
+
+<fieldset id="deliveryInfo">
+ 				<legend>Delivery Options</legend>
+<textarea name="delAddress" id="addressBox" 
+placeholder="Enter delivery address"></textarea>
+ 
+<div>
+<label for="delBox">Delivery Time (leave blank for 
+earliest delivery)</label>
+ 				<input name="delTime" id="delBox" type="time">
+ 			</div>
+	
+</fieldset>
+
+<fieldset id="pickupInfo">
+ 			<legend>Pickup Options</legend>
+<label for="pickupBox">Pickup Time (leave blank for earliest 
+pickup)</label>
+ 			<input name="pickupTime" id="pickupBox" type="time">
+</fieldset>
+
+<div>
+ 				<input type="submit" value="Begin Building your Order">
+</div>
+</form>
+</section>
+<hr>
+
+<p>&copy; 2019 Russo's Pizzeria. All rights reserved.</p>
+</div>
+</body>
+</html>
+
+
+CSS ANSWER KEY:
+
+/* Form Styles */
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+fieldset {
+    background-color: rgb(234, 189, 142);
+    -webkit-flex: 1 1 300px;
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+div {
+    margin: 5px;
+    width: 100%;
+}
+
+legend {
+    color: rgb(255, 200, 200);
+    background-color: rgb(179, 20, 25);
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+fieldset#pickupInfo label,
+fieldset#deliveryInfo label {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(128, 0, 0);
+    color: #000000;
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+#container {
+    background-color: #FFFFFF;
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+img {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+nav {
+    text-align: center;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: white;
+    background-color: red;
+} 
